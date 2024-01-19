@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #0672ffd2;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    z-index: 50; /* Ensure the navigation bar stays on top of other content */
+}
+
+.navbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.navbar-links a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    background-color: transparent;
+    color: #000;
+}
+
+.menu-toggle {
+    cursor: pointer;
+    display: none;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+.mission-statement{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 75vh;
+ background-image: url('media/Vette/IMG_7713.jpg');
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ padding-bottom: 175px;
+} 
+
+.mission-statement h3{
+    padding: 175px;
+}
+
+
+.mission-text{
+    font-size: 10vh;
+    font-family: 'Crimson Text', serif;
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #526cff,
+        0 0 82px #52a3ff,
+        0 0 92px #52abff,
+        0 0 102px #52ceff,
+        0 0 151px #52baff;
+    }
+
+
+
+.black-space {
+ background-color: black;
+ color: white;
+ padding: 20px;
+ margin-top: 75vh; /* Adjust the margin to match the height of the .mission-statement */
+}
+
+.provided{
+    display: grid;
+}
+
+
+
+@media (max-width: 600px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: #0672ffd2;
+        z-index: 1;
+    }
+
+    .navbar-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+    .mission-statement{
+    background-image: url('media/Vette/IMG_7891.jpg');
+    }
+}
