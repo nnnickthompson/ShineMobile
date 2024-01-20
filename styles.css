@@ -57,27 +57,26 @@ nav {
     margin: 6px 0;
 }
 
-.mission-statement{
+.mission-statement {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 75vh;
- background-image: url('media/Vette/IMG_7713.jpg');
- background-size: cover;
- background-position: center;
- background-repeat: no-repeat;
- background-attachment: fixed;
- padding-bottom: 175px;
+    height: 100vh; /* Set height to 100% of viewport height */
+    background-image: url('media/Vette/IMG_7713.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 175px;
 } 
 
-.mission-statement h3{
+.mission-statement h3 {
     padding: 175px;
 }
 
-
-.mission-text{
+.mission-text {
     font-size: 10vh;
     font-family: 'Crimson Text', serif;
     color: #fff;
@@ -90,22 +89,62 @@ nav {
         0 0 92px #52abff,
         0 0 102px #52ceff,
         0 0 151px #52baff;
-    }
+}
 
+.grid-container-provided {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0; /* No gap between items */
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    transition: filter 0.5s ease-in-out;
+}
+
+.grid-item h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    font-family: 'Crimson Text', serif; /* Same font family as mission text */
+    opacity: 0;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #526cff,
+        0 0 82px #52a3ff,
+        0 0 92px #52abff,
+        0 0 102px #52ceff,
+        0 0 151px #52baff;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.grid-item:hover img {
+    filter: grayscale(100%); /* Grayscale effect on hover */
+}
+
+.grid-item:hover h2 {
+    opacity: 1;
+}
 
 
 .black-space {
- background-color: black;
- color: white;
- padding: 20px;
- margin-top: 75vh; /* Adjust the margin to match the height of the .mission-statement */
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-top: 75vh; /* Adjust the margin to match the height of the .mission-statement */
 }
-
-.provided{
-    display: grid;
-}
-
-
 
 @media (max-width: 600px) {
     .navbar-links {
@@ -115,6 +154,7 @@ nav {
         width: 100%;
         background-color: #0672ffd2;
         z-index: 1;
+        top: 60px; /* Adjust the top value based on your navigation bar height */
     }
 
     .navbar-links.show {
@@ -125,8 +165,11 @@ nav {
         display: block;
     }
 
+    .menu-toggle:hover .bar {
+        background-color: #000;
+    }
 
-    .mission-statement{
-    background-image: url('media/Vette/IMG_7891.jpg');
+    .bar {
+        transition: background-color 0.3s;
     }
 }
