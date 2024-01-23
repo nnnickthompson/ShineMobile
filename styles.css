@@ -161,22 +161,46 @@ nav {
 }
 
 .grid-item:hover {
-    transform: scale(1.05); /* Grow only the hovered grid item by 20% on hover */
-    z-index: 1; /* Bring the hovered item to the front */
-    filter: grayscale(100%); /* Grayscale effect on hover */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a box shadow on hover */
+    transform: scale(1.1);
+    z-index: 1;
+    filter: grayscale(100%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transform-origin: center center; /* Set the transform-origin to the center */
 }
 
 .grid-item:hover img {
-    transform: scale(1.05); /* Zoom in the image by 20% on hover */
+    transform: scale(1.05);
 }
 
 .grid-item:hover h2 {
     opacity: 1;
 }
 
+/* Add the following rule to compensate for the scaling effect on the second row */
+.grid-item:nth-child(4),
+.grid-item:nth-child(5),
+.grid-item:nth-child(6) {
+    margin-top: -5px; /* Adjust the negative margin as needed */
+}
 
 
+
+
+.social-media-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.social-media-item {
+    text-align: center;
+}
+
+.social-media-item img {
+    width: 80px; /* Adjust the width as needed */
+    height: 80px; /* Adjust the height as needed */
+}
 
 
 .black-space {
@@ -213,3 +237,25 @@ nav {
         transition: background-color 0.3s;
     }
 }
+
+/* Your existing styles go here */
+
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-info, .business-info {
+    margin-bottom: 20px;
+}
+
+.contact-info h3, .business-info h3 {
+    color: #0672ffd2;
+}
+
+.contact-info p, .business-info p {
+    margin: 5px 0;
+}
+
+
