@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <title>Shine Mobile Detail</title>
+</head>
+<body>
+
+<nav>
+    <div class="navbar-header">
+        <a href="#" class="logo">Shine Mobile</a>
+        <div class="navbar-links" id="navbar-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="menu-toggle" onclick="toggleNav()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+</nav>
+  
+<div class="content">
+    <!-- Exterior Detailing Section -->
+    <div class="detail-section">
+        <h2 class="section-title">Exterior Detail</h2>
+
+        <!-- Shine Basic Exterior Detail -->
+        <div class="detail-card">
+            <h3>Shine Basic Exterior Detail</h3>
+            <ul>
+                <li>Snow foam and wash</li>
+                <li>Bug removal</li>
+                <li>Wheels scrubbed</li>
+                <li>Tire shine</li>
+                <li>Windows</li>
+                <li>3-month wax sealant</li>
+            </ul>
+            <p>Starting at</p>
+            <p class="price">$100</p>
+        </div>
+
+        <!-- Shine Premium Exterior Detail -->
+        <div class="detail-card">
+            <h3>Shine Premium Exterior Detail</h3>
+            <ul>
+                <li>Snow foam and wash</li>
+                <li>Bug removal</li>
+                <li>Iron removal</li>
+                <li>Wheels scrubbed</li>
+                <li>Tire shine</li>
+                <li>Windows</li>
+                <li>Decontaminate paint with clay bar</li>
+                <li>6-month Wax sealant applied to paint (additional charge for poly seal)</li>
+            </ul>
+            <p>Starting at</p>
+            <p class="price">$150</p>
+        </div>
+
+        <!-- Shine Platinum Exterior Detail -->
+        <div class="detail-card">
+            <h3>Shine Platinum Exterior Detail</h3>
+            <ul>
+                <li>Snow foam and wash</li>
+                <li>Bug removal</li>
+                <li>Iron removal</li>
+                <li>Wheels scrubbed</li>
+                <li>Tire shine</li>
+                <li>Windows</li>
+                <li>Decontaminate paint with clay bar</li>
+                <li>9-month poly sealant (high gloss enhancement + ceramic-like bead off)</li>
+            </ul>
+            <p>Starting at</p>
+            <p class="price">$200</p>
+        </div>
+    </div>
+
+    <!-- Interior Detailing Section -->
+    <div class="detail-section">
+        <h2 class="section-title">Interior Detail</h2>
+
+        <!-- Shine Basic Interior Detail -->
+        <div class="detail-card">
+            <h3>Shine Basic Interior Detail</h3>
+            <ul>
+                <li>Vacuum</li>
+                <li>Panels and plastics scrubbed and wiped</li>
+                <li>Windows</li>
+                <li>Mats cleaned</li>
+                <li>Jams</li>
+            </ul>
+            <p>Starting at</p>
+            <p class="price">$100</p>
+        </div>
+
+        <!-- Shine Premium Interior Detail -->
+        <div class="detail-card">
+            <h3>Shine Premium Interior Detail</h3>
+            <ul>
+                <li>Vacuum</li>
+                <li>Panels and plastics scrubbed and wiped</li>
+                <li>Panels and plastics dressed</li>
+                <li>Seats scrubbed (if leather)</li>
+                <li>Seats conditioned (if leather)</li>
+                <li>Cracks, crevices, cup holders steam cleaned</li>
+                <li>Mats cleaned</li>
+                <li>Windows</li>
+                <li>Jams</li>
+            </ul>
+            <p>Starting at</p>
+            <p class="price">$150</p>
+        </div>
+
+        <!-- Shine Platinum Interior Detail -->
+        <div class="detail-card">
+            <h3>Shine Platinum Interior Detail</h3>
+            <ul>
+                <li>Vacuum</li>
+                <li>Panels and plastics scrubbed and wiped</li>
+                <li>Panels and plastics dressed</li>
+                <li>Seats scrubbed (if leather)</li>
+                <li>Shampoo + extract seats (if cloth)</li>
+                <li>Seats conditioned (if leather)</li>
+                <li>Shampoo + extract carpet</li>
+                <li>Cracks, crevices, cup holders steam cleaned</li>
+                <li>Mats cleaned</li>
+                <li>Windows</li>
+                <li>Jams</li>
+            </ul>
+            <p>Starting at</p>
+            <p class="price">$240</p>
+        </div>
+
+        <!-- Additional Note for Interior Detailing -->
+        <div class="detail-card">
+            <h3>Additional Note</h3>
+            <p class="note">We ask that all personal belongings and big trash be removed from the vehicle prior to detail, or an additional charge for trash removal will be applied.</p>
+            <p class="note">ADDITIONAL CHARGE FOR PET HAIR!</p>
+        </div>
+    </div>
+
+    <!-- Additional Services Section -->
+    <div class="detail-section additional-services">
+        <h2 class="section-title">Additional Services</h2>
+
+        <!-- Pet hair removal -->
+        <div class="detail-card">
+            <h3>Pet Hair Removal</h3>
+            <p>Starting at</p>
+            <p class="price">$75</p>
+            <p class="note">Use of proper pet hair releasing tools for vehicles with excess pet hair</p>
+        </div>
+
+        <!-- Seat & carpet extraction -->
+        <div class="detail-card">
+            <h3>Seat & Carpet Extraction</h3>
+            <p>Starting at</p>
+            <p class="price">$100</p>
+            <p class="note">Full carpet scrub and decontamination with proper stain removal chemicals + extraction tools</p>
+        </div>
+
+        <!-- Engine bay detail -->
+        <div class="detail-card">
+            <h3>Engine Bay Detail</h3>
+            <p>Starting at</p>
+            <p class="price">$75</p>
+            <p class="note">Steam cleaned and fully degreased, all plastic dressed to finish</p>
+        </div>
+
+        <!-- Odor removal -->
+        <div class="detail-card">
+            <h3>Odor Removal</h3>
+            <p>Starting at</p>
+            <p class="price">$75</p>
+            <p class="note">Odor removal bomb which sits in car for 6-12 hours depending on the level of odor that needs to be removed</p>
+        </div>
+
+        <!-- Poly seal -->
+        <div class="detail-card">
+            <h3>Poly Seal</h3>
+            <p>Starting at</p>
+            <p class="price">$50</p>
+            <p class="note">Adds a long-lasting protective gloss finish for up to 9 months</p>
+        </div>
+
+        <!-- Headlight restoration -->
+        <div class="detail-card">
+            <h3>Headlight Restoration (Both Headlights)</h3>
+            <p>Starting at</p>
+            <p class="price">$100</p>
+            <p class="note">Removes yellowing and fog from headlights, finished with a clear coat to bring back each headlight's clear gloss</p>
+        </div>
+
+        <!-- Tree sap removal -->
+        <div class="detail-card">
+            <h3>Tree Sap Removal</h3>
+            <p>Starting at</p>
+            <p class="price">$75</p>
+            <p class="note">Removal of any sap or adhesive-like substance from paint</p>
+        </div>
+
+        <!-- Trash removal -->
+        <div class="detail-card">
+            <h3>Trash Removal</h3>
+            <p>Starting at</p>
+            <p class="price">$25</p>
+            <p class="note">Cleanup of all trash prior to detail</p>
+        </div>
+    </div>
+</div><!-- Paint Enhancement Section -->
+<div class="detail-section">
+    <h2 class="section-title">Paint Enhancement</h2>
+
+    <!-- Car Paint Enhancement -->
+    <div class="detail-card">
+        <h3>Car Paint Enhancement</h3>
+        <p>Starting at</p>
+        <p class="price">$250</p>
+        <p class="note">Light polish to enhance gloss off vehicle</p>
+    </div>
+
+    <!-- SUV/Trucks Paint Enhancement -->
+    <div class="detail-card">
+        <h3>SUV/Trucks Paint Enhancement</h3>
+        <p>Starting at</p>
+        <p class="price">$300</p>
+        <p class="note">Light polish to enhance gloss off vehicle</p>
+    </div>
+
+    <!-- Additional Note for Oversized Vehicles -->
+    <div class="detail-card">
+        <h3>Oversized Vehicles</h3>
+        <p class="note">Boats, bikes, trailers, etc. - Contact for pricing as they vary</p>
+    </div>
+
+    <!-- Level 1 Paint Correction -->
+    <div class="detail-card">
+        <h3>Level 1 Paint Correction</h3>
+        <p>Starting at</p>
+        <p class="price">$450</p>
+        <p class="note">Aim for 50% defect removal, Shine premium exterior detail done before</p>
+    </div>
+
+    <!-- Level 2 Paint Correction -->
+    <div class="detail-card">
+        <h3>Level 2 Paint Correction</h3>
+        <p>Starting at</p>
+        <p class="price">$650</p>
+        <p class="note">Aim for 75% defect removal, Shine premium exterior detail done before</p>
+    </div>
+
+    <!-- Level 3 Paint Correction -->
+    <div class="detail-card">
+        <h3>Level 3 Paint Correction</h3>
+        <p>Starting at</p>
+        <p class="price">$800</p>
+        <p class="note">Aim for 90% defect removal, Shine premium exterior detail done before</p>
+    </div>
+
+    <!-- Paint Enhancement Description -->
+    <div class="detail-card">
+        <h3>Paint Enhancement Description</h3>
+        <p class="note">Do you have swirl marks, scratches, oxidation, etc. on your vehicle's paint? At Shine Detailing, we know exactly what it takes to get rid of those paint defects and bring back the true beauty of your vehicle. Our team of automotive professionals is trained and has a variety of professional combinations to approach and complete any job. Whether it's your vehicle, bike, boat, or jet ski, in the automotive industry, we assure you Shine is the place for you.</p>
+    </div>
+</div>
+
+
+
+<!-- Shopping Cart Popup -->
+<div class="shopping-cart-popup" id="shopping-cart-popup">
+    <div class="cart-content">
+        <h2>shopping cart</h2>
+        <ul id="cart-list-popup"></ul>
+        <p id="total-price-popup">Total: Starting at $0.00</p>
+        <!-- User Information Form -->
+        <form id="user-info-form" onsubmit="prepareQuote()">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="additional-info">Additional Information:</label>
+            <textarea id="additional-info" name="additional-info" rows="4"></textarea>
+            <button type="button" onclick="prepareQuote()">Request Quote</button>
+        </form>
+        <button id="close-cart-popup" onclick="toggleCartPopup()">clear</button>
+    </div>
+</div>
+
+
+</body>
+</html>
