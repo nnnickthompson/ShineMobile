@@ -4,6 +4,14 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+.services-body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+    color: #333;
+}
 
 nav {
     background-color: #0672ffd2;
@@ -44,6 +52,10 @@ nav {
     background-color: transparent;
     color: #000;
 }
+
+
+
+
 
 .menu-toggle {
     cursor: pointer;
@@ -383,6 +395,8 @@ footer {
     bottom: 20px;
     right: 20px;
     width: 300px;
+    max-height: 400px; /* Set a fixed maximum height for the popup */
+    overflow-y: auto; /* Enable vertical scrolling */
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;

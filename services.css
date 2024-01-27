@@ -1,0 +1,585 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Shared styles for body and services-body */
+body, .services-body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #0672ffd2;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+}
+
+.navbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.navbar-links a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    background-color: transparent;
+    color: #000;
+}
+
+.menu-toggle {
+    cursor: pointer;
+    display: none;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+/* Mission statement styles */
+/* Base styling for mission statement */
+.mission-statement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    background-image: url('media/IMG_7015.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 5%; /* Adjust this value as needed */
+}
+
+.mission-statement h1 {
+    padding: 5%; /* Adjust this value as needed */
+}
+
+.mission-text {
+    font-size: 5vw; /* Adjust this value as needed */
+    font-family: 'Crimson Text', serif;
+    color: #fff;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #526cff, 0 0 82px #52a3ff, 0 0 92px #52abff, 0 0 102px #52ceff, 0 0 151px #52baff;
+}
+
+/* Media query for smaller screens */
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .mission-statement h1 {
+        padding: 2%; /* Adjust this value as needed */
+    }
+
+    .mission-text {
+        font-size: 5vw; /* Adjust this value as needed */
+    
+    }
+
+    /* Smaller logo for phones */
+    .mission-logo {
+        max-width: 60%; /* Adjust this value as needed */
+        margin-top: 40px; /* Adjust the margin as needed */
+    }
+}
+
+/* About us styles */
+.About-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    height: auto;
+    background-color: #000;
+    filter: grayscale(40%);
+    font-family: 'Crimson Text', serif;
+    color: #080000;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #526cff, 0 0 82px #52a3ff, 0 0 92px #52abff, 0 0 102px #52ceff, 0 0 151px #52baff;
+}
+
+.About-us img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Grid container styles */
+.grid-container-provided {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0;
+}
+
+/* Grid item styles */
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    transition: filter 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+}
+
+.grid-item h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    font-family: 'Crimson Text', serif;
+    opacity: 0;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #526cff, 0 0 82px #52a3ff, 0 0 92px #52abff, 0 0 102px #52ceff, 0 0 151px #52baff;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.grid-item:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    filter: grayscale(100%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transform-origin: center center;
+}
+
+.grid-item:hover img {
+    transform: scale(1.05);
+}
+
+.grid-item:hover h2 {
+    opacity: 1;
+}
+
+.grid-item:nth-child(4),
+.grid-item:nth-child(5),
+.grid-item:nth-child(6) {
+    margin-top: -5px;
+}
+
+/* Social media section styles */
+.social-media-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.social-media-item {
+    text-align: center;
+}
+
+.social-media-item img {
+    width: 80px;
+    height: 80px;
+}
+
+/* Black space styles */
+.black-space {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-top: 75vh;
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: #0672ffd2;
+        z-index: 1;
+        top: 60px;
+    }
+
+    .navbar-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle:hover .bar {
+        background-color: #000;
+    }
+
+    .bar {
+        transition: background-color 0.3s;
+    }
+}
+
+/* Footer styles */
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-info, .business-info {
+    margin-bottom: 20px;
+}
+
+.contact-info h3, .business-info h3 {
+    color: #0672ffd2;
+}
+
+.contact-info p, .business-info p {
+    margin: 5px 0;
+}
+
+/* Detail section styles */
+.detail-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    margin-top: 125px;
+    
+    padding: 30px; /* Adjust padding as needed for spacing */
+    border-bottom: 2px solid #ddd; /* Add a bottom border between sections */
+    padding: 30px; /* Adjust padding as needed for spacing */
+}
+
+.exterior-bg {
+    background-image: url(media/IMG_7094.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.addon-bg{
+    background-image: url(media/393F2BA8-DFCB-408E-A1D3-6041DD29AFCA__42524.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ 
+ 
+}
+
+.interior-bg {
+    background-image: url(media/Vette/IMG_7949.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
+
+.paint-bg{
+    background-image: url(media/Vette/IMG_7825.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+     
+}
+
+.section-title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+.section-title {
+    font-size: 2.5em;
+    color: #0672ffd2;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #526cff,
+        0 0 82px #52a3ff,
+        0 0 92px #52abff,
+        0 0 102px #52ceff,
+        0 0 151px #52baff;
+}
+
+
+.detail-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.detail-card {
+    background: rgba(255, 255, 255, 0.9); /* Set a slightly transparent white background for cards */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    flex: 0 0 calc(30% - 40px);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.detail-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.detail-card ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.detail-card ul li {
+    padding: 8px 0;
+    color: #555;
+}
+
+.detail-card p.price {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #0672ffd2;
+}
+
+.detail-card p.note {
+    margin-top: 15px;
+    color: #888;
+    font-size: 14px;
+}
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .detail-card {
+        flex: 0 0 calc(100% - 40px);
+        margin: 20px 0;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: linear-gradient(to right, #0672ffd2, #004080);
+        position: absolute;
+        top: 70px;
+        left: 0;
+    }
+
+    .navbar-links.show {
+        display: flex;
+    }
+
+    .navbar-links a {
+        padding: 14px 0;
+        border-bottom: 1px solid white;
+    }
+}
+
+.detail-card p.service-description {
+    color: #555;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Styles for Shopping Cart Popup */
+.shopping-cart-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    z-index: 1000;
+}
+
+.cart-content {
+    padding: 10px;
+}
+
+.shopping-cart-popup h2 {
+    margin-bottom: 10px;
+}
+
+#cart-list-popup {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-list-popup li {
+    margin-bottom: 5px;
+}
+
+#total-price-popup {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#user-info-form {
+    margin-top: 10px;
+}
+
+#user-info-form label,
+#user-info-form input,
+#user-info-form textarea,
+#user-info-form button {
+    margin-bottom: 10px;
+}
+
+#close-cart-popup {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Modify the existing button styles */
+button {
+    background-color: #0672ffd2;
+    color: #fff;
+    border: none;
+    padding: 12px 24px; /* Increased padding for a more spacious feel */
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px; /* Add margin to the top of buttons */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #004080;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Shopping Cart Popup */
+.shopping-cart-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: block;
+    z-index: 1000;
+    padding: 10px; /* Add padding for even spacing */
+}
+
+
+
+#close-cart-popup {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px; /* Add margin for even spacing */
+}
+
+/* Add this style for the "Request Quote" button */
+#request-quote-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0672ffd2;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1001; /* Ensure the button is above the shopping cart popup */
+}
+
+/* Update this style to hide the shopping cart initially */
+.shopping-cart-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Initially set to none */
+    z-index: 1000;
+    padding: 10px; /* Add padding for even spacing */
+}
+
+.note-paint{
+    margin-right:25%;
+    margin-left:25%;
+    background: rgba(255, 255, 255, 0.9); /* Set a slightly transparent white background for cards */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 0 0 calc(30% - 40px);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -89,9 +89,10 @@ function prepareQuote() {
     const cartList = document.getElementById("cart-list-popup");
     const totalPriceElement = document.getElementById("total-price-popup");
 
-    const userEmail = document.getElementById('email').value;
-    const userPhone = document.getElementById('phone').value;
-    const additionalInfo = document.getElementById('additional-info').value;
+    // Move these variable declarations outside of the forEach loop
+    let userEmail = document.getElementById('email').value;
+    let userPhone = document.getElementById('phone').value;
+    let additionalInfo = document.getElementById('additional-info').value;
 
     // Create an array to store selected services
     const selectedServices = [];
@@ -124,5 +125,221 @@ function prepareQuote() {
     window.open(mailtoLink, '_blank');
 }
 
+function toggleServicesPopup() {
+    var selectedServicesPopup = document.getElementById("selected-services-popup");
+    selectedServicesPopup.style.display = (selectedServicesPopup.style.display === "none") ? "block" : "none";
+}
+function addToQuote(serviceName, servicePrice) {
+    // Add the selected service to the array
+    selectedServices.push({ name: serviceName, price: servicePrice });
+
+    // Update the shopping cart
+    updateShoppingCart();
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    var navbarLinks = document.getElementById("navbar-links");
+    var menuToggle = document.querySelector(".menu-toggle");
+
+    menuToggle.addEventListener("click", function (event) {
+        event.stopPropagation();
+        navbarLinks.classList.toggle("show");
+    });
+
+    navbarLinks.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            navbarLinks.classList.remove("show");
+        });
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!navbarLinks.contains(event.target) && !menuToggle.contains(event.target)) {
+            navbarLinks.classList.remove("show");
+        }
+    });
+
+    var selectedServices = [];
+
+    function updateShoppingCart() {
+        var cartList = document.getElementById("cart-list-popup");
+        var totalPriceElement = document.getElementById("total-price-popup");
+
+        cartList.innerHTML = "";
+
+        var totalPrice = 0;
+        selectedServices.forEach(function (service, index) {
+            var cartItem = document.createElement("li");
+
+            cartItem.textContent = service.name + " - $" + service.price;
+
+            var removeButton = document.createElement("button");
+            removeButton.textContent = "Remove";
+            removeButton.addEventListener("click", function () {
+                selectedServices.splice(index, 1);
+                updateShoppingCart();
+            });
+
+            cartItem.appendChild(removeButton);
+            cartList.appendChild(cartItem);
+
+            totalPrice += parseFloat(service.price);
+        });
+
+        totalPriceElement.textContent = "Total: $" + totalPrice.toFixed(2);
+    }
+
+    document.querySelectorAll(".detail-card").forEach(function (card) {
+        card.addEventListener("click", function () {
+            var serviceName = card.querySelector("h3").textContent.trim();
+            var price = card.querySelector("p.price").textContent.trim().replace('$', '');
+
+            selectedServices.push({ name: serviceName, price: price });
+
+            updateShoppingCart();
+        });
+    });
+});
+
+function prepareQuote() {
+    const cartList = document.getElementById("cart-list-popup");
+    const totalPriceElement = document.getElementById("total-price-popup");
+
+    const userEmail = document.getElementById('email').value;
+    const userPhone = document.getElementById('phone').value;
+    const additionalInfo = document.getElementById('additional-info').value;
+
+    const selectedServices = [];
+
+    cartList.querySelectorAll("li").forEach(function (cartItem) {
+        const serviceName = cartItem.textContent.split(" - $")[0];
+        const servicePrice = parseFloat(cartItem.textContent.split(" - $")[1]);
+
+        selectedServices.push({ name: serviceName, price: servicePrice });
+    });
+
+    const totalPrice = parseFloat(totalPriceElement.textContent.split("$")[1]);
+
+    let emailBody = `Selected Services:\n${selectedServices.map(item => `${item.name}: $${item.price.toFixed(2)}`).join('\n')}\n\nTotal Price: $${totalPrice.toFixed(2)}`;
+
+    emailBody += `\n\nUser Information:\nEmail: ${userEmail}\nPhone: ${userPhone}\nAdditional Info: ${additionalInfo}`;
+
+    const encodedEmailBody = encodeURIComponent(emailBody);
+
+    const mailtoLink = `mailto:nickrthompson94@gmail.com?subject=Quote Request&body=${encodedEmailBody}`;
+
+    window.open(mailtoLink, '_blank');
+}
+
+function toggleServicesPopup() {
+    var selectedServicesPopup = document.getElementById("selected-services-popup");
+    selectedServicesPopup.style.display = (selectedServicesPopup.style.display === "none") ? "block" : "none";
+}
+
+function addToQuote(serviceName, servicePrice) {
+    selectedServices.push({ name: serviceName, price: servicePrice });
+    updateShoppingCart();
+}
+// Function to toggle the visibility of the detail section
+function toggleSection(sectionClass) {
+    const section = document.querySelector(`.${sectionClass}`);
+    section.style.display = (section.style.display === 'none' || section.style.display === '') ? 'block' : 'none';
+}
+
+function toggleCartPopup() {
+    var cartPopup = document.getElementById('shopping-cart-popup');
+    cartPopup.style.display = (cartPopup.style.display === 'none' || cartPopup.style.display === '') ? 'block' : 'none';
+
+    var requestQuoteBtn = document.getElementById('request-quote-btn');
+    requestQuoteBtn.style.display = (cartPopup.style.display === 'none') ? 'block' : 'none';
+}
+function hideCartAndShowToggle() {
+    // Hide the shopping cart
+    document.getElementById("shopping-cart-popup").style.display = "none";
+
+    // Show the "Request Quote" toggle button
+    document.getElementById("request-quote-btn").style.display = "block";
+}
 
 
+function prepareQuote() {
+    const cartList = document.getElementById("cart-list-popup");
+    const totalPriceElement = document.getElementById("total-price-popup");
+
+    const userEmail = document.getElementById('email').value;
+    const userPhone = document.getElementById('phone').value;
+    const additionalInfo = document.getElementById('additional-info').value;
+
+    const selectedServices = [];
+
+    cartList.querySelectorAll("li").forEach(function (cartItem) {
+        const serviceName = cartItem.textContent.split(" - $")[0];
+        const servicePrice = parseFloat(cartItem.textContent.split(" - $")[1]);
+
+        selectedServices.push({ name: serviceName, price: servicePrice });
+    });
+
+    const totalPrice = parseFloat(totalPriceElement.textContent.split("$")[1]);
+
+    let emailBody = `Selected Services:\n${selectedServices.map(item => `${item.name}: $${item.price.toFixed(2)}`).join('\n')}\n\nTotal Price: $${totalPrice.toFixed(2)}`;
+
+    emailBody += `\n\nUser Information:\nEmail: ${userEmail}\nPhone: ${userPhone}\nAdditional Info: ${additionalInfo}`;
+
+    const encodedEmailBody = encodeURIComponent(emailBody);
+
+    // Create an anchor element to trigger the email client
+    const mailtoLink = document.createElement('a');
+    mailtoLink.href = `mailto:nickrthompson94@gmail.com?subject=Quote Request&body=${encodedEmailBody}`;
+
+    // Simulate a click on the anchor element
+    mailtoLink.click();
+}function prepareQuote() {
+    const cartList = document.getElementById("cart-list-popup");
+    const totalPriceElement = document.getElementById("total-price-popup");
+
+    const userEmail = document.getElementById('email').value;
+    const userPhone = document.getElementById('phone').value;
+    const additionalInfo = document.getElementById('additional-info').value;
+
+    const selectedServices = [];
+
+    cartList.querySelectorAll("li").forEach(function (cartItem) {
+        const serviceName = cartItem.textContent.split(" - $")[0];
+        const servicePrice = parseFloat(cartItem.textContent.split(" - $")[1]);
+
+        selectedServices.push({ name: serviceName, price: servicePrice });
+    });
+
+    const totalPrice = parseFloat(totalPriceElement.textContent.split("$")[1]);
+
+    let emailBody = `Selected Services:\n${selectedServices.map(item => `${item.name}: $${item.price.toFixed(2)}`).join('\n')}\n\nTotal Price: $${totalPrice.toFixed(2)}`;
+
+    emailBody += `\n\nUser Information:\nEmail: ${userEmail}\nPhone: ${userPhone}\nAdditional Info: ${additionalInfo}`;
+
+    const encodedEmailBody = encodeURIComponent(emailBody);
+
+    // Create an anchor element to trigger the email client
+    const mailtoLink = document.createElement('a');
+    mailtoLink.href = `mailto:nickrthompson94@gmail.com?subject=Quote Request&body=${encodedEmailBody}`;
+
+    // Simulate a click on the anchor element
+    mailtoLink.click();
+}
+
+
+ // Add a click event listener to all detail cards
+ document.querySelectorAll(".detail-card").forEach(function (card) {
+    card.addEventListener("click", function () {
+        // Extract service name and price from the clicked card
+        var serviceName = card.querySelector("h3").textContent.trim();
+        var price = card.querySelector("p.price").textContent.trim().replace('$', '');
+
+        // Add the selected service to the array
+        selectedServices.push({ name: serviceName, price: price });
+
+        // Update the shopping cart
+        updateShoppingCart();
+
+        // Display the shopping cart
+        toggleCartPopup();
+    });
+});
