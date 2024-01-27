@@ -343,3 +343,30 @@ function prepareQuote() {
         toggleCartPopup();
     });
 });
+
+
+
+// JavaScript to add scroll effect
+window.addEventListener('scroll', function () {
+    var scrollPosition = window.scrollY;
+    var gridItems = document.querySelectorAll('.grid-item');
+
+    gridItems.forEach(function (item) {
+        var itemTop = item.offsetTop;
+        var itemHeight = item.offsetHeight;
+
+        var halfwayUp = scrollPosition > itemTop - window.innerHeight / 2;
+        var inViewport = scrollPosition > itemTop - window.innerHeight && scrollPosition < itemTop + itemHeight;
+
+        if (inViewport) {
+            item.classList.add('scroll-effect');
+        } else {
+            item.classList.remove('scroll-effect');
+        }
+
+        if (halfwayUp) {
+            item.querySelector('h2').style.opacity = 1;
+        }
+    });
+});
+

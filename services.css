@@ -66,6 +66,7 @@ nav {
     margin: 6px 0;
 }
 
+
 /* Mission statement styles */
 /* Base styling for mission statement */
 .mission-statement {
@@ -113,107 +114,6 @@ nav {
     }
 }
 
-/* About us styles */
-.About-us {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10%;
-    height: auto;
-    background-color: #000;
-    filter: grayscale(40%);
-    font-family: 'Crimson Text', serif;
-    color: #080000;
-    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #526cff, 0 0 82px #52a3ff, 0 0 92px #52abff, 0 0 102px #52ceff, 0 0 151px #52baff;
-}
-
-.About-us img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-/* Grid container styles */
-.grid-container-provided {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0;
-}
-
-/* Grid item styles */
-.grid-item {
-    position: relative;
-    overflow: hidden;
-    transition: filter 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.grid-item img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.5s ease-in-out;
-}
-
-.grid-item h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-    font-size: 2rem;
-    font-family: 'Crimson Text', serif;
-    opacity: 0;
-    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #526cff, 0 0 82px #52a3ff, 0 0 92px #52abff, 0 0 102px #52ceff, 0 0 151px #52baff;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.grid-item:hover {
-    transform: scale(1.1);
-    z-index: 1;
-    filter: grayscale(100%);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    transform-origin: center center;
-}
-
-.grid-item:hover img {
-    transform: scale(1.05);
-}
-
-.grid-item:hover h2 {
-    opacity: 1;
-}
-
-.grid-item:nth-child(4),
-.grid-item:nth-child(5),
-.grid-item:nth-child(6) {
-    margin-top: -5px;
-}
-
-/* Social media section styles */
-.social-media-section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-}
-
-.social-media-item {
-    text-align: center;
-}
-
-.social-media-item img {
-    width: 80px;
-    height: 80px;
-}
-
-/* Black space styles */
-.black-space {
-    background-color: black;
-    color: white;
-    padding: 20px;
-    margin-top: 75vh;
-}
 
 /* Media query for small screens */
 @media (max-width: 600px) {
@@ -583,3 +483,115 @@ button:hover {
     justify-content: space-between;
     align-items: center;
 }
+
+.contact-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 0 20px; /* Add padding for better spacing on small screens */
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: calc(100% - 24px); /* Adjust width to account for padding */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input:focus {
+    border-color: #08d;
+}
+
+.cut {
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    height: 12px;
+    left: 20px;
+    position: absolute;
+    top: -12px;
+    transform: translateY(0);
+    transition: transform 0.3s;
+    width: calc(100% - 40px); /* Adjust width to account for padding */
+}
+
+.cut-short {
+    width: 50px;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+    transform: translateY(8px);
+}
+
+.placeholder {
+    color: #ddd;
+    font-size: 14px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+    transform: translateY(-20px) translateX(5px) scale(0.75);
+    color: #08d;
+}
+
+.submit {
+    background-color: #08d;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.submit:hover {
+    background-color: #06b;
+}
+
+#map-container {
+    width: 100%; /* Make the map container full width */
+    margin-top: 20px; /* Add some margin for better separation */
+}
+
+/* Additional styles for responsiveness */
+@media only screen and (max-width: 600px) {
+    .input {
+        width: 100%; /* Full width on small screens */
+    }
+
+    .cut,
+    .cut-short {
+        width: calc(100% - 40px); /* Adjust width to account for padding */
+    }
+
+    #map-container {
+        width: 100%; /* Make the map container full width */
+        margin-top: 20px; /* Add some margin for better separation */
+        height: 300px; /* Set a specific height for the map on small screens */
+    }
+}
+

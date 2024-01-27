@@ -76,7 +76,7 @@ nav {
     align-items: center;
     position: relative;
     height: 100vh; /* Set height to 100% of viewport height */
-    background-image: url('media/Vette/IMG_7713.jpg');
+    background-image: url('media/IMG_7015.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -110,19 +110,9 @@ nav {
     align-items: center;
     padding: 10%; /* Adjust the padding as needed */
     height: auto; /* Set height to auto to allow it to expand based on content */
-    background-color: #000;
     filter: grayscale(40%);
     font-family: 'Crimson Text', serif;
     color: #080000;
-    text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px #526cff,
-        0 0 82px #52a3ff,
-        0 0 92px #52abff,
-        0 0 102px #52ceff,
-        0 0 151px #52baff;
 }
 
 
@@ -446,3 +436,101 @@ footer {
     border-radius: 3px;
     cursor: pointer;
 }
+
+
+/* Add your existing styles here */
+
+@media only screen and (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: linear-gradient(to right, #0672ffd2, #004080);
+        position: absolute;
+        top: 70px;
+        left: 0;
+    }
+
+    .navbar-links.show {
+        display: flex;
+    }
+
+    .navbar-links a {
+        padding: 14px 0;
+        border-bottom: 1px solid white;
+    }
+
+    /* Add styles for smaller screens here */
+
+    .mission-statement {
+        padding-bottom: 100px; /* Adjust padding for smaller screens */
+    }
+
+    .mission-text {
+        font-size: 8vh; /* Adjust font size for smaller screens */
+    }
+
+    .About-us {
+        padding: 5%; /* Adjust padding for smaller screens */
+    }
+
+    .grid-container-provided {
+        grid-template-columns: repeat(1, 1fr); /* Adjust the number of columns for smaller screens */
+    }
+
+    .grid-item {
+        margin-top: 0; /* Adjust margin for smaller screens */
+    }
+    .scroll-effect .grid-item {
+        filter: grayscale(100%);
+        transform: scale(1.1);
+    }
+
+    .scroll-effect .grid-item h2 {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .social-media-section {
+        flex-direction: column; /* Stack social media icons for smaller screens */
+    }
+
+    .social-media-item {
+        margin-bottom: 10px; /* Adjust margin for smaller screens */
+    }
+
+    .black-space {
+        margin-top: 50vh; /* Adjust margin for smaller screens */
+    }
+
+    footer {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+    .grid-item {
+        filter: grayscale(0);
+        transform: scale(1);
+        transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+    
+    .scroll-effect .grid-item {
+        filter: grayscale(100%);
+        transform: scale(1.1);
+    }
+    
+    .grid-item h2 {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+    
+    .scroll-effect .grid-item h2 {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
