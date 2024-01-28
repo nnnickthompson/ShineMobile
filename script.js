@@ -19,6 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    function toggleNav() {
+        navbarLinks.classList.toggle("show");
+    }
+
     // Initialize an empty array to store selected services
     var selectedServices = [];
 

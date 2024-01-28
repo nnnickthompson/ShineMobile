@@ -75,34 +75,25 @@ nav {
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 100vh; /* Set height to 100% of viewport height */
+    height: 100vh;
     background-image: url('media/IMG_7015.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding-bottom: 175px;
-} 
+    padding-bottom: 5%; /* Adjust this value as needed */
+}
 
-.mission-statement h3 {
-    padding: 175px;
+.mission-statement h1 {
+    padding: 5%; /* Adjust this value as needed */
 }
 
 .mission-text {
-    font-size: 10vh;
+    font-size: 5vw; /* Adjust this value as needed */
     font-family: 'Crimson Text', serif;
     color: #fff;
-    text-shadow:
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px #526cff,
-        0 0 82px #52a3ff,
-        0 0 92px #52abff,
-        0 0 102px #52ceff,
-        0 0 151px #52baff;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #526cff, 0 0 82px #52a3ff, 0 0 92px #52abff, 0 0 102px #52ceff, 0 0 151px #52baff;
 }
-
 .About-us {
     display: flex;
     flex-direction: column;
@@ -258,6 +249,24 @@ footer {
 
 .contact-info p, .business-info p {
     margin: 5px 0;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .mission-statement h1 {
+        padding: 2%; /* Adjust this value as needed */
+    }
+
+    .mission-text {
+        font-size: 5vw; /* Adjust this value as needed */
+    
+    }
+
+    /* Smaller logo for phones */
+    .mission-logo {
+        max-width: 60%; /* Adjust this value as needed */
+        margin-top: 40px; /* Adjust the margin as needed */
+    }
 }
 
 
@@ -463,13 +472,7 @@ footer {
 
     /* Add styles for smaller screens here */
 
-    .mission-statement {
-        padding-bottom: 100px; /* Adjust padding for smaller screens */
-    }
-
-    .mission-text {
-        font-size: 8vh; /* Adjust font size for smaller screens */
-    }
+   
 
     .About-us {
         padding: 5%; /* Adjust padding for smaller screens */
