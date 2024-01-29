@@ -13,8 +13,11 @@ body {
     color: #333;
 }
 
+/* Navigation styles */
+/* Navigation styles */
 nav {
-    background-color: #0672ffd2;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     position: fixed;
     width: 100%;
@@ -23,15 +26,16 @@ nav {
 
 .navbar-header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 10px 20px;
 }
 
 .logo {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5em;
+    
+      height: 100px;
+    
 }
 
 .navbar-links {
@@ -39,7 +43,7 @@ nav {
 }
 
 .navbar-links a {
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -49,6 +53,7 @@ nav {
 }
 
 .navbar-links a:hover {
+
     background-color: transparent;
     color: #000;
 }
@@ -69,6 +74,33 @@ nav {
     margin: 6px 0;
 }
 
+@media (max-width: 600px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: #0672ffd2;
+        z-index: 1;
+        top: 60px;
+    }
+
+    .navbar-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle:hover .bar {
+        background-color: #000;
+    }
+
+    .bar {
+        transition: background-color 0.3s;
+    }
+}
 .mission-statement {
     display: flex;
     flex-direction: column;

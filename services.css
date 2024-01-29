@@ -15,24 +15,26 @@ body, .services-body {
 
 /* Navigation styles */
 nav {
-    background-color: #0672ffd2;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     position: fixed;
     width: 100%;
-    z-index: 50;
+    z-index: 50; /* Ensure the navigation bar stays on top of other content */
 }
 
 .navbar-header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 10px 20px;
 }
 
 .logo {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5em;
+    
+      height: 100px;
+    
 }
 
 .navbar-links {
@@ -40,7 +42,7 @@ nav {
 }
 
 .navbar-links a {
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -50,9 +52,14 @@ nav {
 }
 
 .navbar-links a:hover {
+
     background-color: transparent;
     color: #000;
 }
+
+
+
+
 
 .menu-toggle {
     cursor: pointer;
@@ -66,9 +73,34 @@ nav {
     margin: 6px 0;
 }
 
+@media (max-width: 600px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: #0672ffd2;
+        z-index: 1;
+        top: 60px;
+    }
 
-/* Mission statement styles */
-/* Base styling for mission statement */
+    .navbar-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle:hover .bar {
+        background-color: #000;
+    }
+
+    .bar {
+        transition: background-color 0.3s;
+    }
+}
+
 .mission-statement {
     display: flex;
     flex-direction: column;
@@ -77,6 +109,37 @@ nav {
     position: relative;
     height: 100vh;
     background-image: url('media/IMG_7015.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 5%; /* Adjust this value as needed */
+}
+.mission-statement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    background-image: url('media/IMG_7015.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 5%; /* Adjust this value as needed */
+}
+/* Mission statement styles */
+/* Base styling for mission statement */
+.mission-statement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    background-image: url('media/Vette/IMG_7831.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -574,7 +637,8 @@ button:hover {
 
 #map-container {
     width: 100%; /* Make the map container full width */
-    margin-top: 20px; /* Add some margin for better separation */
+    margin: 20px auto; /* Add some top and bottom margin, and set left and right margin to auto for centering */
+    justify-content: center;
 }
 
 /* Additional styles for responsiveness */

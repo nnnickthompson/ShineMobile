@@ -5,56 +5,56 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="contact.css">
     <script defer src="script.js"></script>
+
     <title>Shine Mobile Detail</title>
 </head>
 <body class="services-body">
-
-    <nav>
-        <div class="navbar-header">
-            <a href="index.html" class="logo">Shine Mobile</a>
-            <div class="navbar-links" id="navbar-links">
-                <a href="index.html">Home</a>
-                <a href="Services.html">Services</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <div class="menu-toggle" onclick="toggleNav()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </div>
-    </nav>
-    
 <div class="mission-statement">
-    <div class="contact-form">
-        <div class="title">Contact Us!</div>
+<nav>
+    <div class="navbar-header">
+        <a href="#" >
+            <img class="logo" src="media/logo.jpeg">
+        </a>
+        <div class="navbar-links" id="navbar-links">
+            <a href="index.html">Home</a>
+            <a href="Services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="menu-toggle" onclick="toggleNav()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+</nav>
+
+<form method="post" action="mailto:JoeMelillo@ShineMbl.com">
+  <h2>Please fill in the form below</h2>
+  
+  <input id="first-name" type="text" required placeholder="First name" name="First-Name">
+  
+  <input type="text" required placeholder="Last name" name="Last-Name">
+  
+  <input id="eml" type="email" required placeholder="email@" name="Email">
+  
+  <input id="tel" type="tel" placeholder="Phone Number" name="Phone-Number">
+  
+  <textarea rows="6" required placeholder="Message" name="Message"></textarea>
+  
+  <button type="reset">Reset</button>
+  <button type="submit">Submit</button>
+</form>
+
         
-        <div class="input-container ic1">
-          <input id="firstname" class="input" type="text" required />
-          <div class="cut"></div>
-          <label for="firstname" class="placeholder">First Name</label>
-        </div>
-        <div class="input-container ic2">
-          <input id="lastname" class="input" type="text" required />
-          <div class="cut"></div>
-          <label for="lastname" class="placeholder">Last Name</label>
-        </div>
-        <div class="input-container ic2">
-          <input id="email" class="input" type="email" required />
-          <div class="cut cut-short"></div>
-          <label for="email" class="placeholder">Email</label>
-        </div>
-        <div class="input-container ic2">
-            <input id="email" class="input" type="email" required />
-            <div class="cut cut-short"></div>
-            <label for="email" class="placeholder">Message For Owner</label>
-          </div>
-        <button type="submit" class="submit">Submit</button>
-      </div>
       
-      <div id="map-container">
+      
+      <div class="map-container" id="map-container">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7283.783994170708!2d-75.10586719891374!3d39.86406907830355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6ce51576f4b13%3A0xb7a8e049cafeb3e7!2s612%20Creek%20Rd%2C%20Bellmawr%2C%20NJ%2008031!5e0!3m2!1sen!2sus!4v1706384052399!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
+      <script src="script.js"></script>
  </div>
+ 
+ </body>
+ </html>

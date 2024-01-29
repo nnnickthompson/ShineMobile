@@ -1,9 +1,31 @@
-document.addEventListener("DOMContentLoaded", function () {
+function toggleNav() {
     var navbarLinks = document.getElementById("navbar-links");
+    navbarLinks.classList.toggle("show");
+}
+
+
+  var prevScrollpos = window.pageYOffset;
+        var navbar = document.querySelector("nav");
+
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+
+            if (prevScrollpos > currentScrollPos) {
+                // Scrolling up, show the navbar
+                navbar.style.top = "0";
+            } else {
+                // Scrolling down, hide the navbar
+                navbar.style.top = "-200px"; // You can adjust this value based on your navbar height
+            }
+
+            prevScrollpos = currentScrollPos;
+        };
+
+document.addEventListener("DOMContentLoaded", function () {
+    var navbarLinks = document.querySelector(".navbar-links");
     var menuToggle = document.querySelector(".menu-toggle");
 
-    menuToggle.addEventListener("click", function (event) {
-        event.stopPropagation();
+    menuToggle.addEventListener("click", function () {
         navbarLinks.classList.toggle("show");
     });
 
@@ -12,16 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
             navbarLinks.classList.remove("show");
         });
     });
-
-    document.addEventListener("click", function (event) {
-        if (!navbarLinks.contains(event.target) && !menuToggle.contains(event.target)) {
-            navbarLinks.classList.remove("show");
-        }
-    });
-
-    function toggleNav() {
-        navbarLinks.classList.toggle("show");
-    }
+});
 
     // Initialize an empty array to store selected services
     var selectedServices = [];
@@ -67,19 +80,21 @@ document.addEventListener("DOMContentLoaded", function () {
         totalPriceElement.textContent = "Total: $" + totalPrice.toFixed(2);
     }
 
-    // Add a click event listener to all detail cards
-    document.querySelectorAll(".detail-card").forEach(function (card) {
-        card.addEventListener("click", function () {
-            // Extract service name and price from the clicked card
-            var serviceName = card.querySelector("h3").textContent.trim();
-            var price = card.querySelector("p.price").textContent.trim().replace('$', '');
+// Add a click event listener to all detail cards
+document.querySelectorAll(".detail-card").forEach(function (card) {
+    card.addEventListener("click", function () {
+        // Extract service name and price from the clicked card
+        var serviceName = card.querySelector("h3").textContent.trim();
+        var price = card.querySelector("p.price").textContent.trim().replace('$', '');
 
-            // Add the selected service to the array
-            selectedServices.push({ name: serviceName, price: price });
+        // Add the selected service to the array
+        selectedServices.push({ name: serviceName, price: price });
 
-            // Update the shopping cart
-            updateShoppingCart();
-        });
+        // Update the shopping cart
+        updateShoppingCart();
+
+        // Display the shopping cart
+        toggleCartPopup(); // This line triggers the function
     });
 });
 
@@ -123,7 +138,7 @@ function prepareQuote() {
     const encodedEmailBody = encodeURIComponent(emailBody);
 
     // Create mailto link
-    const mailtoLink = `mailto:nickrthompson94@gmail.com?subject=Quote Request&body=${encodedEmailBody}`;
+    const mailtoLink = `mailto:JoeMelillo@ShineMbl.com?subject=Quote Request&body=${encodedEmailBody}`;
 
     // Open mailto link in a new tab
     window.open(mailtoLink, '_blank');
@@ -229,7 +244,7 @@ function prepareQuote() {
 
     const encodedEmailBody = encodeURIComponent(emailBody);
 
-    const mailtoLink = `mailto:nickrthompson94@gmail.com?subject=Quote Request&body=${encodedEmailBody}`;
+    const mailtoLink = `mailto:JoeMelillo@ShineMbl.com?subject=Quote Request&body=${encodedEmailBody}`;
 
     window.open(mailtoLink, '_blank');
 }
@@ -292,7 +307,7 @@ function prepareQuote() {
 
     // Create an anchor element to trigger the email client
     const mailtoLink = document.createElement('a');
-    mailtoLink.href = `mailto:nickrthompson94@gmail.com?subject=Quote Request&body=${encodedEmailBody}`;
+    mailtoLink.href = `mailto:JoeMelillo@ShineMbl.com?subject=Quote Request&body=${encodedEmailBody}`;
 
     // Simulate a click on the anchor element
     mailtoLink.click();
@@ -323,7 +338,7 @@ function prepareQuote() {
 
     // Create an anchor element to trigger the email client
     const mailtoLink = document.createElement('a');
-    mailtoLink.href = `mailto:nickrthompson94@gmail.com?subject=Quote Request&body=${encodedEmailBody}`;
+    mailtoLink.href = `mailto:JoeMelillo@ShineMbl.com?subject=Quote Request&body=${encodedEmailBody}`;
 
     // Simulate a click on the anchor element
     mailtoLink.click();
@@ -374,3 +389,19 @@ window.addEventListener('scroll', function () {
     });
 });
 
+
+
+function sendEmail() {
+    var firstName = document.getElementById("firstname").value;
+    var lastName = document.getElementById("lastname").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+
+    var emailBody = "First Name: " + firstName + "\n";
+    emailBody += "Last Name: " + lastName + "\n";
+    emailBody += "Email: " + email + "\n";
+    emailBody += "Message: " + message;
+
+    var mailtoLink = "mailto:JoeMelillo@ShineMbl.com?subject=Contact Form Submission&body=" + encodeURIComponent(emailBody);
+    window.location.href = mailtoLink;
+}

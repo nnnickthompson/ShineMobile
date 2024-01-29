@@ -1,0 +1,389 @@
+
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Shared styles for body and services-body */
+body, .services-body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation styles */
+/* Navigation styles */
+nav {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    z-index: 50; /* Ensure the navigation bar stays on top of other content */
+}
+
+.navbar-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    
+      height: 100px;
+    
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.navbar-links a {
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+
+    background-color: transparent;
+    color: #000;
+}
+
+
+
+
+
+.menu-toggle {
+    cursor: pointer;
+    display: none;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+@media (max-width: 600px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: #0672ffd2;
+        z-index: 1;
+        top: 60px;
+    }
+
+    .navbar-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle:hover .bar {
+        background-color: #000;
+    }
+
+    .bar {
+        transition: background-color 0.3s;
+    }
+}
+/* Mission statement styles */
+/* Base styling for mission statement */
+.mission-statement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    background-image: url('media/IMG_7413.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 5%; /* Adjust this value as needed */
+}
+
+.mission-statement h1 {
+    padding: 5%; /* Adjust this value as needed */
+}
+
+.mission-text {
+    font-size: 5vw; /* Adjust this value as needed */
+    font-family: 'Crimson Text', serif;
+    color: #fff;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #526cff, 0 0 82px #52a3ff, 0 0 92px #52abff, 0 0 102px #52ceff, 0 0 151px #52baff;
+}
+
+/* Media query for smaller screens */
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .mission-statement h1 {
+        padding: 2%; /* Adjust this value as needed */
+    }
+
+    .mission-text {
+        font-size: 5vw; /* Adjust this value as needed */
+    
+    }
+
+    /* Smaller logo for phones */
+    .mission-logo {
+        max-width: 60%; /* Adjust this value as needed */
+        margin-top: 40px; /* Adjust the margin as needed */
+    }
+}
+
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: #0672ffd2;
+        z-index: 1;
+        top: 60px;
+    }
+
+    .navbar-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle:hover .bar {
+        background-color: #000;
+    }
+
+    .bar {
+        transition: background-color 0.3s;
+    }
+}
+
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  html,body {
+    background:#777;
+    padding:0;
+    margin:0;
+    font-family:sans-serif;
+    color:#fff
+  }
+  form {
+   width:90%;
+    max-width:500px;
+    margin:15px auto;
+  }
+  input, textarea {
+    width:100%;
+    margin-bottom:10px;
+    border-radius:3px;
+    border:solid 1px #ccc;
+    padding:4px 7px;
+  }
+  #eml, #tel {
+    width:49%;
+  }
+  #tel {
+    float:right;
+  }
+  button {
+    width: 120px;
+    float:right;
+    margin-left:15px;
+    border-radius:3px;
+    border:solid 1px #ccc;
+    padding:4px 7px;
+  }
+  button:hover {
+    background-color:rgb(79, 186, 238);
+  }
+
+
+/* Footer styles */
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-info, .business-info {
+    margin-bottom: 20px;
+}
+
+.contact-info h3, .business-info h3 {
+    color: #0672ffd2;
+}
+
+.contact-info p, .business-info p {
+    margin: 5px 0;
+}
+
+/* Media query for screens up to 768px width */
+@media only screen and (max-width: 768px) {
+    /* Navigation styles */
+    nav {
+        position: static;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: #0672ffd2;
+        z-index: 1;
+        top: 60px;
+    }
+
+    .navbar-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Reset navigation bar styles */
+    .navbar-links a {
+        text-align: left;
+        padding: 10px 16px; /* Adjust padding for better spacing on mobile */
+        font-size: 16px; /* Adjust font size for better readability on mobile */
+    }
+
+    .menu-toggle:hover .bar {
+        background-color: #000;
+    }
+
+    .bar {
+        transition: background-color 0.3s;
+    }
+
+    /* Mission statement styles */
+    .mission-statement h1 {
+        padding: 2%; /* Adjust this value as needed */
+    }
+
+    .mission-text {
+        font-size: 5vw; /* Adjust this value as needed */
+    }
+
+    /* Smaller logo for phones */
+    .mission-logo {
+        max-width: 60%; /* Adjust this value as needed */
+        margin-top: 40px; /* Adjust the margin as needed */
+    }
+
+    /* Form styles */
+    form {
+        width: 100%; /* Adjust width for better responsiveness */
+        margin: 15px 0;
+    }
+
+    input, textarea {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #eml, #tel {
+        width: 100%;
+        float: none;
+    }
+
+    #tel {
+        float: none;
+    }
+
+    button {
+        width: 100%; /* Adjust width for better responsiveness */
+        float: none;
+        margin-left: 0;
+    }
+
+    /* Footer styles */
+    footer {
+        padding: 10px; /* Adjust padding for better spacing on mobile */
+    }
+
+    .contact-info, .business-info {
+        margin-bottom: 10px; /* Adjust margin for better spacing on mobile */
+    }
+}
+
+
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .map-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 75%; /* You can adjust this value to control the height */
+    }
+    .map-container iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+}
+/* Your existing styles */
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+    .navbar-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: #0672ffd2;
+        z-index: 1;
+        top: 60px; /* Adjust the top value based on your navigation bar height */
+    }
+
+    .navbar-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .bar {
+        transition: background-color 0.3s;
+    }
+
+    .mission-statement {
+        padding-top: 60px; /* Adjust the padding to accommodate the fixed navigation bar */
+    }
+}
