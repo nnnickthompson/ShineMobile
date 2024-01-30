@@ -34,7 +34,7 @@ nav {
 
 .logo {
     
-      height: 100px;
+      height: 75px;
     
 }
 
@@ -43,13 +43,23 @@ nav {
 }
 
 .navbar-links a {
-    color: black;
+    font-family: 'Crimson Text', serif;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
     transition: color 0.3s;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #526cff,
+        0 0 82px #52a3ff,
+        0 0 92px #52abff,
+        0 0 102px #52ceff,
+        0 0 151px #52baff;
 }
 
 .navbar-links a:hover {
@@ -74,33 +84,7 @@ nav {
     margin: 6px 0;
 }
 
-@media (max-width: 600px) {
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        width: 100%;
-        background-color: #0672ffd2;
-        z-index: 1;
-        top: 60px;
-    }
 
-    .navbar-links.show {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .menu-toggle:hover .bar {
-        background-color: #000;
-    }
-
-    .bar {
-        transition: background-color 0.3s;
-    }
-}
 .mission-statement {
     display: flex;
     flex-direction: column;
@@ -121,7 +105,7 @@ nav {
 }
 
 .mission-text {
-    font-size: 5vw; /* Adjust this value as needed */
+    font-size: 25px; /* Adjust this value as needed */
     font-family: 'Crimson Text', serif;
     color: #fff;
     text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #526cff, 0 0 82px #52a3ff, 0 0 92px #52abff, 0 0 102px #52ceff, 0 0 151px #52baff;
@@ -157,11 +141,13 @@ nav {
     transition: filter 0.5s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition for smooth scaling, filter, and box-shadow */
 }
 
-.grid-item img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.5s ease-in-out; /* Add transition for smooth zoom effect */
-}
+
+    .grid-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensure the image covers the entire container */
+        transition: transform 0.5s ease-in-out; /* Add transition for smooth zoom effect */
+    }
 
 .grid-item h2 {
     position: absolute;
@@ -236,30 +222,21 @@ nav {
 }
 
 @media (max-width: 600px) {
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        width: 100%;
-        background-color: #0672ffd2;
-        z-index: 1;
-        top: 60px; /* Adjust the top value based on your navigation bar height */
-    }
+ 
 
-    .navbar-links.show {
+    .mission-statement {
         display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .menu-toggle:hover .bar {
-        background-color: #000;
-    }
-
-    .bar {
-        transition: background-color 0.3s;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100vh;
+        background-image: url('media/IMG_7148.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        padding-bottom: 5%; /* Adjust this value as needed */
     }
 }
 
@@ -388,25 +365,7 @@ footer {
         margin: 20px 0;
     }
 
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        background: linear-gradient(to right, #0672ffd2, #004080);
-        position: absolute;
-        top: 70px;
-        left: 0;
-    }
-
-    .navbar-links.show {
-        display: flex;
-    }
-
-    .navbar-links a {
-        padding: 14px 0;
-        border-bottom: 1px solid white;
-    }
+ 
 }
 
 .detail-card p.service-description {
@@ -482,25 +441,7 @@ footer {
 /* Add your existing styles here */
 
 @media only screen and (max-width: 768px) {
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        background: linear-gradient(to right, #0672ffd2, #004080);
-        position: absolute;
-        top: 70px;
-        left: 0;
-    }
-
-    .navbar-links.show {
-        display: flex;
-    }
-
-    .navbar-links a {
-        padding: 14px 0;
-        border-bottom: 1px solid white;
-    }
+  
 
     /* Add styles for smaller screens here */
 
@@ -548,19 +489,8 @@ footer {
         transition: filter 0.5s ease-in-out, transform 0.5s ease-in-out;
     }
     
-    .scroll-effect .grid-item {
-        filter: grayscale(100%);
-        transform: scale(1.1);
-    }
-    
-    .grid-item h2 {
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-    }
-    
-    .scroll-effect .grid-item h2 {
-        opacity: 1;
-    }
+   
+   
 }
 
 
@@ -569,3 +499,8 @@ footer {
 
 
 
+@media only screen and (max-width: 600px) {
+    .detail-card {
+        display: none; /* Hide detail cards on mobile */
+    }
+}
