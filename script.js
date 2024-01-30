@@ -1,25 +1,54 @@
+function handleSectionButtonClick() {
+    // Check if the screen width is less than or equal to 768 pixels (you can adjust this value based on your design)
+    if (window.innerWidth <= 768) {
+        // Toggle the visibility of the detail cards or perform desired actions
+        document.querySelectorAll(".detail-card").forEach(function (card) {
+            card.style.display = (card.style.display === 'none' || card.style.display === '') ? 'block' : 'none';
+        });
+    }
+}
+
+document.querySelectorAll(".section-title-button").forEach(function (button) {
+    button.addEventListener("click", handleSectionButtonClick);
+});
+
+//test 2
+
+// Add a click event listener to the button under the detail section
+document.getElementById("choose-package-btn").addEventListener("click", function () {
+    // Check if the screen width is less than or equal to 768 pixels (you can adjust this value based on your design)
+    if (window.innerWidth <= 768) {
+       
+
+        // Hide the button
+        document.getElementById("choose-package-btn").style.display = 'none';
+    }
+});
+
+
+
+//test
+
+document.getElementById("choose-package-btn").addEventListener("click", function () {
+    // Check if the screen width is less than or equal to 768 pixels (you can adjust this value based on your design)
+    if (window.innerWidth <= 768) {
+        // Toggle the visibility of the detail cards
+        document.querySelectorAll(".detail-card").forEach(function (card) {
+            card.style.display = (card.style.display === 'none' || card.style.display === '') ? 'block' : 'none';
+        });
+    }
+});
+
+
+
+
 function toggleNav() {
     var navbarLinks = document.getElementById("navbar-links");
     navbarLinks.classList.toggle("show");
 }
 
 
-  var prevScrollpos = window.pageYOffset;
-        var navbar = document.querySelector("nav");
 
-        window.onscroll = function () {
-            var currentScrollPos = window.pageYOffset;
-
-            if (prevScrollpos > currentScrollPos) {
-                // Scrolling up, show the navbar
-                navbar.style.top = "0";
-            } else {
-                // Scrolling down, hide the navbar
-                navbar.style.top = "-200px"; // You can adjust this value based on your navbar height
-            }
-
-            prevScrollpos = currentScrollPos;
-        };
 
 document.addEventListener("DOMContentLoaded", function () {
     var navbarLinks = document.querySelector(".navbar-links");
