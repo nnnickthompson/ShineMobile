@@ -44,13 +44,22 @@ nav {
 }
 
 .navbar-links a {
-    color: black;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
     transition: color 0.3s;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #526cff,
+        0 0 82px #52a3ff,
+        0 0 92px #52abff,
+        0 0 102px #52ceff,
+        0 0 151px #52baff;
 }
 
 .navbar-links a:hover {
@@ -75,33 +84,7 @@ nav {
     margin: 6px 0;
 }
 
-@media (max-width: 600px) {
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        width: 100%;
-        background-color: #0672ffd2;
-        z-index: 1;
-        top: 60px;
-    }
 
-    .navbar-links.show {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .menu-toggle:hover .bar {
-        background-color: #000;
-    }
-
-    .bar {
-        transition: background-color 0.3s;
-    }
-}
 /* Mission statement styles */
 /* Base styling for mission statement */
 .mission-statement {
@@ -151,34 +134,7 @@ nav {
 }
 
 
-/* Media query for small screens */
-@media (max-width: 600px) {
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        width: 100%;
-        background-color: #0672ffd2;
-        z-index: 1;
-        top: 60px;
-    }
 
-    .navbar-links.show {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .menu-toggle:hover .bar {
-        background-color: #000;
-    }
-
-    .bar {
-        transition: background-color 0.3s;
-    }
-}
 
 
 html {
@@ -247,41 +203,9 @@ footer {
 /* Media query for screens up to 768px width */
 @media only screen and (max-width: 768px) {
     /* Navigation styles */
-    nav {
-        position: static;
-    }
-
-    .navbar-links {
+   
+    .navbar-header{
         display: none;
-        flex-direction: column;
-        position: absolute;
-        width: 100%;
-        background-color: #0672ffd2;
-        z-index: 1;
-        top: 60px;
-    }
-
-    .navbar-links.show {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    /* Reset navigation bar styles */
-    .navbar-links a {
-        text-align: left;
-        padding: 10px 16px; /* Adjust padding for better spacing on mobile */
-        font-size: 16px; /* Adjust font size for better readability on mobile */
-    }
-
-    .menu-toggle:hover .bar {
-        background-color: #000;
-    }
-
-    .bar {
-        transition: background-color 0.3s;
     }
 
     /* Mission statement styles */
@@ -351,29 +275,13 @@ footer {
         top: 0;
         left: 0;
     }
+  
 }
 /* Your existing styles */
 
 /* Mobile styles */
 @media only screen and (max-width: 600px) {
-    .navbar-header {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        width: 100%;
-        background-color: #0672ffd2;
-        z-index: 1;
-        top: 60px; /* Adjust the top value based on your navigation bar height */
-    }
-
-    .navbar-links.show {
-        display: flex;
-    }
 
     .menu-toggle {
         display: block;
