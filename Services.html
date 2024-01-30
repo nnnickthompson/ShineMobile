@@ -38,14 +38,16 @@
  </div>
 <div class="content" >
     <!-- Exterior Detailing Section -->
-    <div class="detail-section exterior-bg" id="exterior-detail-section">
+    <div class="detail-section exterior-bg" id="exterior-detail-section" id="section1">
 
-        <h2 class="section-title" >Exterior Detail</h2>
-        
+        <h2 class="section-title one" >Exterior Detail</h2>
+<!-- Add this button to each section where you want to reveal the detail cards -->
+<button  class="choose-package-btn" id="choose-package-btn">Choose Package</button>
+    
 
         <!-- Shine Basic Exterior Detail -->
-        <div class="detail-card">
-            <h3>Shine Basic Interior Detail</h3>
+        <div class="detail-card" id="detailCard1">
+            <h3>Shine Basic Exterior Detail</h3>
             <ul>
                 <li>Snow foam and wash</li>
                 <li>Bug removal</li>
@@ -60,7 +62,7 @@
         </div>
 
         <!-- Shine Premium Exterior Detail -->
-        <div class="detail-card">
+        <div class="detail-card" id="detailCard2">
             <h3>Shine Premium Exterior Detail</h3>
             <ul>
                 <li>Snow foam and wash</li>
@@ -79,7 +81,7 @@
         </div>
 
         <!-- Shine Platinum Exterior Detail -->
-        <div class="detail-card">
+        <div class="detail-card ">
             <h3>Shine Platinum Exterior Detail</h3>
             <ul>
                 <li>Snow foam and wash</li>
@@ -100,11 +102,11 @@
     </div>
 
     <!-- Interior Detailing Section -->
-    <div class="detail-section interior-bg" id="interior-detail-section">
-        <h2 class="section-title">Interior Detail</h2>
-
+    <div class="detail-section interior-bg" id="section2">
+        <h2 class="section-title two">Interior Detail</h2>
+        <button id="choosePackageBtn" class="section-title-button">Choose Package</button>
         <!-- Shine Basic Interior Detail -->
-        <div class="detail-card">
+        <div class="detail-card ">
             <h3>Shine Basic Interior Detail</h3>
             <ul>
                 <li>Vacuum</li>
@@ -120,7 +122,7 @@
         </div>
 
         <!-- Shine Premium Interior Detail -->
-        <div class="detail-card">
+        <div class="detail-card ">
             <h3>Shine Premium Interior Detail</h3>
             <ul>
                 <li>Vacuum</li>
@@ -165,9 +167,9 @@
     </div>
 
     <!-- Additional Services Section -->
-    <div class="detail-section additional-services addon-bg" id="additional-services-section">
-        <h2 class="section-title">Additional Services</h2>
-
+    <div class="detail-section additional-services addon-bg" id="additional-services-section" id="section3">
+        <h2 class="section-title three">Additional Services</h2>
+        <button id="choosePackageBtn" class="section-title-button">Choose Add Ons</button>
         <!-- Pet hair removal -->
         <div class="detail-card">
             <h3>Pet Hair Removal</h3>
@@ -250,7 +252,8 @@
     </div>
 </div><!-- Paint Enhancement Section -->
 <div class="detail-section paint-bg" id="paint-enhancement-section" >
-    <h2 class="section-title">Paint Enhancement</h2>
+    <h2 class="section-title four">Paint Enhancement</h2>
+    <button id="choosePackageBtn" class="section-title-button">Choose Package</button>
 
     <!-- Car Paint Enhancement -->
     <div class="detail-card">
@@ -310,11 +313,11 @@
 
     </div>
 
-    <!-- Additional Services Section -->
-    <div class="PPF and Tint">
-        <h2 class="section-title">Tint and PPF</h2>
+    </div>
 
-        <!-- Pet hair removal -->
+        <div class="detail-section paint-bg" id="paint-enhancement-section" >
+            <h2 class="section-title four">PPF And Tint</h2>
+            <button id="choosePackageBtn" class="section-title-button">Learn More</button>
         <div class="detail-card">
             <h3>PPF</h3>
             <p>Starting at</p>
@@ -332,7 +335,11 @@
             
 
         </div>
+        <div class="detail-card"> If you are looking for tint or PPF, make sure to mention that in the additional info form within the shopping cart!</div>
+
 </div>
+
+
 
 
 
