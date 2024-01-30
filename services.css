@@ -29,11 +29,12 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 10px 20px;
+   
 }
 
 .logo {
     
-      height: 100px;
+      height: 75px;
     
 }
 
@@ -42,13 +43,23 @@ nav {
 }
 
 .navbar-links a {
-    color: black;
+    font-family: 'Crimson Text', serif;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
     transition: color 0.3s;
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #526cff,
+    0 0 82px #52a3ff,
+    0 0 92px #52abff,
+    0 0 102px #52ceff,
+    0 0 151px #52baff;
 }
 
 .navbar-links a:hover {
@@ -69,37 +80,10 @@ nav {
 .bar {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: black;
     margin: 6px 0;
 }
 
-@media (max-width: 600px) {
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        width: 100%;
-        background-color: #0672ffd2;
-        z-index: 1;
-        top: 60px;
-    }
-
-    .navbar-links.show {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .menu-toggle:hover .bar {
-        background-color: #000;
-    }
-
-    .bar {
-        transition: background-color 0.3s;
-    }
-}
 
 .mission-statement {
     display: flex;
@@ -108,7 +92,7 @@ nav {
     align-items: center;
     position: relative;
     height: 100vh;
-    background-image: url('media/IMG_7015.jpg');
+    background-image: url('media/Vette/IMG_7605.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -122,7 +106,7 @@ nav {
     align-items: center;
     position: relative;
     height: 100vh;
-    background-image: url('media/IMG_7015.jpg');
+    background-image: url('media/Vette/IMG_7605.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -139,7 +123,7 @@ nav {
     align-items: center;
     position: relative;
     height: 100vh;
-    background-image: url('media/Vette/IMG_7831.jpg');
+    background-image: url('media/Vette/IMG_7605.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -178,34 +162,7 @@ nav {
 }
 
 
-/* Media query for small screens */
-@media (max-width: 600px) {
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        width: 100%;
-        background-color: #0672ffd2;
-        z-index: 1;
-        top: 60px;
-    }
 
-    .navbar-links.show {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .menu-toggle:hover .bar {
-        background-color: #000;
-    }
-
-    .bar {
-        transition: background-color 0.3s;
-    }
-}
 
 /* Footer styles */
 footer {
@@ -233,7 +190,6 @@ footer {
     justify-content: space-around;
     margin-bottom: 40px;
     margin-top: 125px;
-    
     padding: 30px; /* Adjust padding as needed for spacing */
     border-bottom: 2px solid #ddd; /* Add a bottom border between sections */
     padding: 30px; /* Adjust padding as needed for spacing */
@@ -282,7 +238,7 @@ footer {
 }
 .section-title {
     font-size: 2.5em;
-    color: #0672ffd2;
+    color: white;
     margin-bottom: 20px;
     text-align: center;
     text-transform: uppercase;
@@ -361,29 +317,83 @@ footer {
 }
 /* Media query for smaller screens */
 @media only screen and (max-width: 768px) {
+
     .detail-card {
-        flex: 0 0 calc(100% - 40px);
-        margin: 20px 0;
+        display: none; /* Hide detail cards on mobile */
     }
 
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        background: linear-gradient(to right, #0672ffd2, #004080);
-        position: absolute;
-        top: 70px;
-        left: 0;
+
+ 
+    .exterior-bg {
+       background-image: none;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    
+    }
+    
+    .addon-bg{
+        background-image: none;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+     
+     
+    }
+    
+    .interior-bg {
+        background-image: none;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+       
+    }
+    
+    .paint-bg{
+        background-image: none;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      
+         
     }
 
-    .navbar-links.show {
+    .section-title{
+        height: 250px;
         display: flex;
+       justify-content: center;
+        align-items: center;
     }
 
-    .navbar-links a {
-        padding: 14px 0;
-        border-bottom: 1px solid white;
+    .one{
+        background-image: url(media/Vette/IMG_7825.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+    .two{
+        background-image: url(media/Vette/IMG_7831.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+    .three{
+        background-image: url(media/Vette/IMG_7825.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+    .four{
+        background-image: url(media/Vette/IMG_7825.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+    .five{
+        background-image: url(media/Vette/IMG_7825.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     }
 }
 
@@ -643,6 +653,7 @@ button:hover {
 
 /* Additional styles for responsiveness */
 @media only screen and (max-width: 600px) {
+    
     .input {
         width: 100%; /* Full width on small screens */
     }
@@ -657,5 +668,26 @@ button:hover {
         margin-top: 20px; /* Add some margin for better separation */
         height: 300px; /* Set a specific height for the map on small screens */
     }
+}
+
+@media only screen and (min-width: 769px) {
+    /* Hide the "Choose Package" buttons on larger screens */
+    #choosePackageBtn {
+        display: none;
+    }
+        .choose-package-btn{
+display: none;
+        }
+    
+}
+@media only screen and (max-width: 768px) {
+    /* ... (existing styles) ... */
+
+    .detail-card {
+        display: none; /* Hide detail cards on mobile */
+        flex: 0 0 calc(100% - 40px); /* Set detail cards to 100% width */
+    }
+
+    /* ... (existing styles) ... */
 }
 
