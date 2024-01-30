@@ -1,61 +1,297 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="contact.css">
-    <script defer src="script.js"></script>
 
-    <title>Shine Mobile Detail</title>
-</head>
-<body class="services-body">
-    <nav>
-        <div class="navbar-header">
-            <a href="#" >
-                <img class="logo" src="media/logo.jpeg">
-            </a>
-            <div class="navbar-links" id="navbar-links">
-                <a href="index.html">Home</a>
-                <a href="Services.html">Services</a>
-                <a href="contact.html">Contact</a>
-            </div>
-            <div class="menu-toggle" onclick="toggleNav()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </div>
-    </nav>
-<div class="mission-statement">
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Shared styles for body and services-body */
+body, .services-body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation styles */
+/* Navigation styles */
+nav {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    z-index: 50; /* Ensure the navigation bar stays on top of other content */
+}
+
+.navbar-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    
+      height: 100px;
+    
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.navbar-links a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #526cff,
+        0 0 82px #52a3ff,
+        0 0 92px #52abff,
+        0 0 102px #52ceff,
+        0 0 151px #52baff;
+}
+
+.navbar-links a:hover {
+
+    background-color: transparent;
+    color: #000;
+}
 
 
-<form method="post" action="mailto:JoeMelillo@ShineMbl.com">
-  <h2>Please fill in the form below</h2>
-  
-  <input id="first-name" type="text" required placeholder="First name" name="First-Name">
-  
-  <input type="text" required placeholder="Last name" name="Last-Name">
-  
-  <input id="eml" type="email" required placeholder="email@" name="Email">
-  
-  <input id="tel" type="tel" placeholder="Phone Number" name="Phone-Number">
-  
-  <textarea rows="6" required placeholder="Message" name="Message"></textarea>
-  
-  <button type="reset">Reset</button>
-  <button type="submit">Submit</button>
-</form>
 
-        
-      
-      
-      <div class="map-container" id="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7283.783994170708!2d-75.10586719891374!3d39.86406907830355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6ce51576f4b13%3A0xb7a8e049cafeb3e7!2s612%20Creek%20Rd%2C%20Bellmawr%2C%20NJ%2008031!5e0!3m2!1sen!2sus!4v1706384052399!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <script src="script.js"></script>
- </div>
- 
- </body>
- </html>
+
+
+.menu-toggle {
+    cursor: pointer;
+    display: none;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+
+/* Mission statement styles */
+/* Base styling for mission statement */
+.mission-statement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    background-image: url('media/IMG_7413.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: 5%; /* Adjust this value as needed */
+}
+
+.mission-statement h1 {
+    padding: 5%; /* Adjust this value as needed */
+}
+
+.mission-text {
+    font-size: 5vw; /* Adjust this value as needed */
+    font-family: 'Crimson Text', serif;
+    color: #fff;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #526cff, 0 0 82px #52a3ff, 0 0 92px #52abff, 0 0 102px #52ceff, 0 0 151px #52baff;
+}
+
+/* Media query for smaller screens */
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .mission-statement h1 {
+        padding: 2%; /* Adjust this value as needed */
+    }
+
+    .mission-text {
+        font-size: 5vw; /* Adjust this value as needed */
+    
+    }
+
+    /* Smaller logo for phones */
+    .mission-logo {
+        max-width: 60%; /* Adjust this value as needed */
+        margin-top: 40px; /* Adjust the margin as needed */
+    }
+}
+
+
+
+
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  html,body {
+    background:#777;
+    padding:0;
+    margin:0;
+    font-family:sans-serif;
+    color:#fff
+  }
+  form {
+   width:90%;
+    max-width:500px;
+    margin:15px auto;
+  }
+  input, textarea {
+    width:100%;
+    margin-bottom:10px;
+    border-radius:3px;
+    border:solid 1px #ccc;
+    padding:4px 7px;
+  }
+  #eml, #tel {
+    width:49%;
+  }
+  #tel {
+    float:right;
+  }
+  button {
+    width: 120px;
+    float:right;
+    margin-left:15px;
+    border-radius:3px;
+    border:solid 1px #ccc;
+    padding:4px 7px;
+  }
+  button:hover {
+    background-color:rgb(79, 186, 238);
+  }
+
+
+/* Footer styles */
+footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-info, .business-info {
+    margin-bottom: 20px;
+}
+
+.contact-info h3, .business-info h3 {
+    color: #0672ffd2;
+}
+
+.contact-info p, .business-info p {
+    margin: 5px 0;
+}
+
+/* Media query for screens up to 768px width */
+@media only screen and (max-width: 768px) {
+    /* Navigation styles */
+   
+    .navbar-header{
+        display: none;
+    }
+
+    /* Mission statement styles */
+    .mission-statement h1 {
+        padding: 2%; /* Adjust this value as needed */
+    }
+
+    .mission-text {
+        font-size: 5vw; /* Adjust this value as needed */
+    }
+
+    /* Smaller logo for phones */
+    .mission-logo {
+        max-width: 60%; /* Adjust this value as needed */
+        margin-top: 40px; /* Adjust the margin as needed */
+    }
+
+    /* Form styles */
+    form {
+        width: 100%; /* Adjust width for better responsiveness */
+        margin: 15px 0;
+    }
+
+    input, textarea {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #eml, #tel {
+        width: 100%;
+        float: none;
+    }
+
+    #tel {
+        float: none;
+    }
+
+    button {
+        width: 100%; /* Adjust width for better responsiveness */
+        float: none;
+        margin-left: 0;
+    }
+
+    /* Footer styles */
+    footer {
+        padding: 10px; /* Adjust padding for better spacing on mobile */
+    }
+
+    .contact-info, .business-info {
+        margin-bottom: 10px; /* Adjust margin for better spacing on mobile */
+    }
+}
+
+
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .map-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 75%; /* You can adjust this value to control the height */
+    }
+    .map-container iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+  
+}
+/* Your existing styles */
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .bar {
+        transition: background-color 0.3s;
+    }
+
+    .mission-statement {
+        padding-top: 60px; /* Adjust the padding to accommodate the fixed navigation bar */
+    }
+}
